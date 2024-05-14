@@ -28,6 +28,7 @@ require("lazy").setup({
     "williamboman/mason.nvim"
   },
   { "ellisonleao/gruvbox.nvim", priority = 1000 },
+  --{ 'projekt0n/github-nvim-theme' },
   {'hrsh7th/cmp-nvim-lsp'}, {'hrsh7th/cmp-buffer'}, {'hrsh7th/cmp-path'},
     {'hrsh7th/cmp-cmdline'}, {'hrsh7th/nvim-cmp'},
     {
@@ -38,7 +39,8 @@ require("lazy").setup({
     {
         'nvim-lualine/lualine.nvim',
         dependencies = { 'nvim-tree/nvim-web-devicons' }
-    }
+    },
+    { 'lewis6991/gitsigns.nvim' },
 })
 
 
