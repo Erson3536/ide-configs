@@ -1,3 +1,15 @@
+require("mason").setup()
+require("mason-lspconfig").setup {
+    ensure_installed = { "pyright", "rust_analyzer", "tsserver", "gopls", "golangci_lint_ls"},
+}
+
+require("mason-lspconfig").setup_handlers {
+        function (server_name)
+            require("lspconfig")[server_name].setup {}
+        end
+    }
+
+--[[
 -- Setup language servers.
 local lspconfig = require('lspconfig')
 lspconfig.pyright.setup {}
@@ -17,6 +29,8 @@ lspconfig.rust_analyzer.setup {
     },
   },
 }
+]]--
+
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 vim.keymap.set('n', '<leader>lD', vim.diagnostic.open_float)
