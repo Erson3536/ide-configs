@@ -42,6 +42,7 @@ require("lazy").setup({
     },
     { 'lewis6991/gitsigns.nvim' },
     { 'jiangmiao/auto-pairs' },
+    { 'sindrets/diffview.nvim' },
 })
 
 
