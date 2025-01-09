@@ -28,7 +28,17 @@ require("lazy").setup({
         "williamboman/mason.nvim"
     },
     { "williamboman/mason-lspconfig.nvim" },
-    { "ellisonleao/gruvbox.nvim",         priority = 1000 },
+    {
+        "ellisonleao/gruvbox.nvim",
+        priority = 1000,
+        -- config override for fix strange window borders after v0.10.0 NeoVim updated.
+        -- From: https://www.reddit.com/r/neovim/comments/18faftd/comment/kcz6bub
+        config = function()
+            vim.cmd.colorscheme 'gruvbox'
+            vim.api.nvim_set_hl(0, 'FloatBorder', { link = 'Normal' })
+        end,
+        opts = ...,
+    },
     { 'hrsh7th/cmp-nvim-lsp' }, { 'hrsh7th/cmp-buffer' }, { 'hrsh7th/cmp-path' },
     { 'hrsh7th/cmp-cmdline' }, { 'hrsh7th/nvim-cmp' },
     {
