@@ -16,7 +16,7 @@
 
 -- Default options:
 -- Commented because in plugins.lua gruvbox.nvim already config and
--- can not call vim.cmd("colorscheme gruvbox") twice 
+-- can not call vim.cmd("colorscheme gruvbox") twice
 --[[
 req
     terminal_colors = true, -- add neovim terminal colors
@@ -46,3 +46,4 @@ vim.cmd("colorscheme gruvbox")
 
 vim.o.background = "dark" -- or "light" for light mode
 --]]
+vim.cmd[[colorscheme no-clown-fiesta]]

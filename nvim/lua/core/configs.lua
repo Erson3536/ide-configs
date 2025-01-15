@@ -12,6 +12,7 @@ vim.wo.linebreak = true
 vim.opt.virtualedit = "block"
 vim.opt.undofile = true
 vim.opt.shell = "/bin/zsh"
+vim.opt.cursorline = true
 
 -- Mouse
 vim.opt.mouse = "a"
@@ -43,12 +44,10 @@ vim.opt.fillchars = {
     vert = "│",
     fold = "⠀",
     eob = " ", -- suppress ~ at EndOfBuffer
-    -- diff = "⣿", -- alternatives = ⣿ ░ ─ ╱
+    diff = "╱", -- alternatives = ⣿ ░ ─ ╱
     msgsep = "‾",
     foldopen = "▾",
     foldsep = "│",
     foldclose = "▸"
 }
 
-vim.cmd([[highlight clear LineNr]])
-vim.cmd([[highlight clear SignColumn]])
