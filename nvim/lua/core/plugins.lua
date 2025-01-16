@@ -40,7 +40,7 @@ require("lazy").setup({
         opts = ...,
     },
     {
-        "aktersnurra/no-clown-fiesta.nvim",
+        "erson35/no-clown-fiesta.nvim",
         priority = 1000,
         config = config,
         lazy = false,
@@ -76,5 +76,6 @@ require("lazy").setup({
             { "<c-l>",  "<cmd><C-U>TmuxNavigateRight<cr>" },
             { "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
         },
-    }
+    },
+    { 'norcalli/nvim-colorizer.lua' }
 })
